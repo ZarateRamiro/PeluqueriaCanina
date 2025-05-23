@@ -71,8 +71,8 @@ public class Turno {
         "id=" + id +
         ", Fecha y Hora Del Turno= '" + fechayHoraDelTurno +
         ", estado= " + estado + '\'' +
-        "\n mascota= " + mascota +
-        "\n servicio= " + servicio ;
+        "\n mascota= " + mascota+
+        "\n servicio= " + servicio;
   }
 
 

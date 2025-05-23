@@ -66,6 +66,10 @@ public class Servicio {
         ", Tiempo Estimado= " + TiempoEstimado +
         ", precio= " + precio;
   }
+  public static double calcularIva(double precio){
+   final double  iva=21;
+    return (precio*100)/iva;
+  }
 
   public void mostrarDatos() {
     System.out.println(toString());

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Scanner;
+
 public class Mascota {
   private int id;
   private String nombre;
@@ -78,6 +80,7 @@ public class Mascota {
         ", edad= " + edad +
         ", nombre Del Dueño=" + nombreDelDueño;
   }
+
 
 
   public void mostrarDatos() {
