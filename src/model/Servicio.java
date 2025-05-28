@@ -68,10 +68,17 @@ public class Servicio {
   }
   public static double calcularIva(double precio){
    final double  iva=21;
-    return (precio*100)/iva;
+    return (precio*iva)/100;
   }
 
   public void mostrarDatos() {
     System.out.println(toString());
+  }
+  public boolean esServicioLargo(double tiempoEstimado){
+    boolean largo=true;
+     if(tiempoEstimado>60){
+       largo=true;}
+     else {largo=false;}
+     return largo;
   }
 }

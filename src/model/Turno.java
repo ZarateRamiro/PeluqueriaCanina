@@ -1,14 +1,15 @@
 package model;
 
 public class Turno {
+  public static final int MAX_TURNOS_DIARIOS = 5;
   private int id;
   private String fechayHoraDelTurno;
-  private String estado;
+  private Estado estado;
   private static int cantT;
   private Mascota mascota;
   private Servicio servicio;
 
-  public Turno(String fechayHoraDelTurno, String estado, Mascota mascota, Servicio servicio) {
+  public Turno(String fechayHoraDelTurno, Estado estado, Mascota mascota, Servicio servicio) {
     cantT++;
     this.id = cantT;
     this.fechayHoraDelTurno = fechayHoraDelTurno;
@@ -25,11 +26,11 @@ public class Turno {
     this.fechayHoraDelTurno = fechayHoraDelTurno;
   }
 
-  public String getEstado() {
+  public Estado getEstado() {
     return estado;
   }
 
-  public void setEstado(String estado) {
+  public void setEstado(Estado estado) {
     this.estado = estado;
   }
 
@@ -71,12 +72,16 @@ public class Turno {
         "id=" + id +
         ", Fecha y Hora Del Turno= '" + fechayHoraDelTurno +
         ", estado= " + estado + '\'' +
-        "\n mascota= " + mascota+
+        "\n mascota= " + mascota +
         "\n servicio= " + servicio;
   }
 
 
   public void mostrarDatos() {
     System.out.println(toString());
+  }
+
+  public boolean esTurnoActivo() {
+    return this.estado == Estado.PROGRAMADO;
   }
 }
